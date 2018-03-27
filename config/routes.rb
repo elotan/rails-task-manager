@@ -5,6 +5,14 @@ Rails.application.routes.draw do
 
   root to: 'tasks#index'
 
+
+  #CREATE
+
+  get 'tasks/new', to: 'tasks#new', as: :new_task
+  post 'tasks', to: 'tasks#create'
+
+  #READ
+
   get 'tasks', to: 'tasks#index'
   get 'tasks/:id', to: 'tasks#show', as: :task
 
